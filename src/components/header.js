@@ -1,4 +1,4 @@
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React,{useState, useLayoutEffect} from "react"
 //useEffect
@@ -13,19 +13,18 @@ const Header = ({ siteTitle }) => {
   })
   
   return <header className={!isOnTop ? 'active' : ''}>
-    <div
-      style={{
-        margin: `0 auto`,
-        display: 'flex',
-        listStyle: 'none',
-        padding: `1rem`,
-        justifyContent: 'space-between',
-
-      }}
-    >
-      <div></div>
-      <div></div>
-    </div>
+    <nav>
+      <div class = "logo-container">
+        <Link to = '/'>
+        </Link>
+      </div>
+      <ul class = "nav-buttons">
+        <li class = "active"><Link to = "">About</Link></li>
+        <li><Link to = "">Projects</Link></li>
+        <li><Link to = "">Experience</Link></li>
+        <li><Link to = "">Contact</Link></li>
+      </ul>
+    </nav>
   </header>
 }
 
