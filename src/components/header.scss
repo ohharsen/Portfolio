@@ -1,31 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+@import url(https://fonts.googleapis.com/css?family=Kulim+Park);
 header.active {
     box-shadow: 0 8px 6px -6px #7510F750;
-    border-bottom: 0px;   
 }
 
 header{
     margin-bottom: 0;
-    height: 60px;
+    height: 51px;
     background: white;
-    border-bottom: 1px solid #7510F717;
-    width: 90%;
+    width: 100%;
+    padding: 0 5%;
     margin: 0 auto;
     position: fixed;
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
 
+    @media (max-width: 480px){
+        width: 100%;
+    }
+
     nav{
         margin: 0 auto;
         display: flex;
         list-style: none;
-        padding: 10px;
         justify-content: space-between;
-        align-items: stretch;
+        align-items: center;
         height: 100%;
         .logo-container{
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background: url('../images/github-logo.png');
             background-size: contain;
             a{
@@ -40,17 +44,40 @@ header{
             align-items: stretch;
             list-style: none;
             margin: 0;
-            width: 30%;  
+            width: 40%;  
             li{
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 18px;
+                // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: 'Kulim Park';
+                font-weight: 350;
+                font-size: 17px;
                 line-height: 2;
                 margin: 0;
                 a{
-                    color: #707070;
+                    animation-name:menu-button-fade-out;
+                    animation-duration: 0.1s;
+                    animation-fill-mode: forwards; 
                     text-decoration: none;
                 }
             }
+
+            li:hover{
+                a{
+                    animation-name:menu-button-fade-in;
+                    animation-duration: 0.1s;
+                    animation-fill-mode: forwards; 
+                }
+            }
+
+            @keyframes menu-button-fade-in {
+                from{color: #000000;}
+                to{color: #707070;}
+            }
+
+            @keyframes menu-button-fade-out {
+                from{color: #707070;}
+                to{color: #000000;}
+            }
+
             li.active{
                 border-bottom: 3px solid #7510F7;
             }

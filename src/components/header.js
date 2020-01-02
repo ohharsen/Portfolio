@@ -19,10 +19,15 @@ const Header = ({ siteTitle }) => {
         </Link>
       </div>
       <ul class = "nav-buttons">
-        <li class = "active"><Link to = "">About</Link></li>
-        <li><Link to = "">Projects</Link></li>
-        <li><Link to = "">Experience</Link></li>
-        <li><Link to = "">Contact</Link></li>
+        <li class = "active" id="home-button"><Link to = "">Home</Link></li>
+        <li>|</li>
+        <li id="about-button"><Link to = "">About</Link></li>
+        <li>|</li>
+        <li id="projects-button"><Link to = "">Projects</Link></li>
+        <li>|</li>
+        <li id="experience-button"><Link to = "">Experience</Link></li>
+        <li>|</li>
+        <li id="contact-button"><Link to = "">Contact</Link></li>
       </ul>
     </nav>
   </header>

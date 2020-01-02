@@ -1,0 +1,130 @@
+.home-page{
+    margin: 0 auto;
+    padding-top: 80px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/hero.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat; 
+    background-size: 500px;
+    @media (max-width: 480px) {
+        background-size: contain; 
+    }
+    .profile-image{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background: url('../images/profile.png');
+        background-position: -180px -260px;
+    }
+    
+
+    span{
+        color: #7510F7;
+        margin: 0;
+        margin-top: 20px;
+        font-family: 'OCR A';
+        font-weight: 350;
+        font-size: 1.5em;
+    }
+
+    p{
+        margin: 0;
+        font-size: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 70%;
+    }
+
+    button{
+        width: 180px;
+        height: 30px;
+        background: white;
+        appearance: none;;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: content-box;
+        padding: 0;
+        a{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            
+        }
+    }
+    
+    //view work stylings
+
+    .view-work-button{
+        border: 3px solid #7510F7;
+        a{
+            color: #7510F7;
+        }
+    }
+    .view-work-button:hover{
+        animation-name: work-button-invert;
+        animation-duration: 0s;
+        animation-fill-mode: forwards;
+        a{
+            color: white;
+        }
+    }
+
+    @-webkit-keyframes work-button-invert {
+        from {background: linear-gradient(to right,#7510F7 0%, white 100%);}
+        to {background: linear-gradient(to right,#7510F7 100%, white 100%);}
+      }
+      
+      /* Standard syntax */
+      @keyframes work-button-invert {
+        from {background: linear-gradient(to right,#7510F7 0%, white 100%);}
+        to {background: linear-gradient(to right,#7510F7 100%, white 100%);}
+      }
+
+      //resume button stylings
+
+      .resume-button{
+        border: 3px solid #000000;
+        a{
+            color: #000000;
+        }
+    }
+    .resume-button:hover{
+        animation-name: resume-button-invert;
+        animation-duration: 0s;
+        animation-fill-mode: forwards;
+        a{
+            color: white;
+        }
+    }
+
+    @-webkit-keyframes resume-button-invert {
+        from {background: linear-gradient(to right,#000000 0%, white 100%);}
+        to {background: linear-gradient(to right,#000000 100%, white 100%);}
+      }
+      
+      /* Standard syntax */
+      @keyframes resume-button-invert {
+        from {background: linear-gradient(to right,#000000 0%, white 100%);}
+        to {background: linear-gradient(to right,#000000 100%, white 100%);}
+      }
+
+    @media (max-width: 480px) {
+        p{
+            width: 90%;
+        }
+    }
+}

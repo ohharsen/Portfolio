@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+.about-me{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    h1, h2, h3{
+        font-family: 'OCR A';
+        color: #7510F7;
+        font-weight: 350;
+        text-decoration: underline;
+    }
+ 
+    p{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-align: center;
+        width: 40%;
+        color: black;
+        font-size: 1.25em;
+        span{
+            color: #7510F7;
+        }
+    }
+
+    @media (max-width: 480px){
+        p{
+            width: 80%;
+        }
+    }
+
+    .skill-tag{
+        padding: 5px 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #7510F7;
+        box-shadow: 3px 3px 6px #00000043;
+        font-family: 'Quicksand';
+        color: white;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        margin: 0 20px 20px 0;
+    }
+
+    .skills-container{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @media (max-width: 480px) {
+        .skills-container{
+            width: 100%;
+        }
+        .skill-tag{
+            margin: 0 10px 20px 0;
+        }
+    }
+
+    .hobbies{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        figcaption{
+            text-align: center;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 1.25rem;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+            margin: 0;
+        }
+    }
+}
