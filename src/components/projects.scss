@@ -1,38 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Inria+Serif');
+
 .projects{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#7510F7 0%, #7510F7 50%, #ffffff 50%, #ffffff 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1{
-        font-family: 'OCR A';
-        color: #ffffff;
-        font-weight: 350;
-        text-decoration: underline;
+    .projects-header{
+        min-height: 50vh;
+        width: 100%;
+        background: #7510F7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-family: 'OCR A';
+            color: #ffffff;
+            font-weight: 350;
+            text-decoration: underline;
+        }
     }
+    
 
     .thumbnails-container{
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        position: relative;
         width: 80%;
         display: flex;
         justify-content: space-between;
-        transform: translate(-50%, -50%);
         flex-wrap: wrap;
-        @media(max-width: 480px){
-            transform: translate(-50%, -150px);
-        }
+        margin-top: -150px;
         .thumbnail{
-            width: 300px;
-            height: 300px;
+            animation: 0.3s thumbnail-hover-out forwards;
             box-shadow: 0 0 3px 1px #00000039;
             border-radius: 30px;
             background: white;
             margin-bottom: 20px;
             flex-shrink:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a{
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: initial;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-section-divider{
+                    border: 0;
+                    height: 1px;
+                    background: linear-gradient(to right, #7510F700, #7510F775, #7510F700);
+                    width: 90%;
+                    margin: 1px;
+            }
+            img{
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                width: 100%;
+                height: 50%;
+                animation: 0.3s image-blur-out forwards;
+                margin: 0;
+            }
+
+            .title{
+                font-family: 'Oswald', sans-serif;
+                margin: 0;
+                margin-top: 10px;
+            }
+
+            .description{
+                font-family: 'Inria Serif', serif;
+                margin: 0;
+                font-size: 0.7em;
+                text-align: center;
+            }
+
+            .technologies{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                font-size: 0.7em;
+                text-align: center;
+            }
+        }
+
+        .thumbnail:hover{
+            animation: 0.3s thumbnail-hover-in forwards; 
+            img{
+                animation: 0.3s image-blur-in forwards;
+            }
+        }
+
+        @keyframes thumbnail-hover-in{
+            from{
+                width: 300px;
+                height: 300px;
+                margin-top: -0px;
+            }
+            to{
+                width: 305px;
+                height: 305px;
+                margin-top: -2.5px;
+            }
+        }
+
+        @keyframes thumbnail-hover-out{
+            from{
+                width: 305px;
+                height: 305px;
+                margin-top: -2.5px;
+            }
+            to{
+                width: 300px;
+                height: 300px;
+                margin-top: 0px;
+            }
+            
+        }
+
+        @keyframes image-blur-in{
+            from{filter: blur(5px);}
+            to{filter: blur(0px);}
+        }
+
+        @keyframes image-blur-out{
+            from{filter: blur(0px);}
+            to{filter: blur(5px);}
         }
 
         .thumbnail:hover{

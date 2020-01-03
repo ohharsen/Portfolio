@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Inria+Serif);
+.experience{
+    font-size: 0.9rem;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    h1, h3{
+        font-family: 'OCR A';
+        color: #7510F7;
+        font-weight: 350;
+        text-decoration: underline;
+        flex-grow: 0;
+        text-align: center;
+    }
+
+    h3{
+        text-align: initial;
+    }
+
+    .detailed-experience{
+        
+        flex-grow: 1;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: stretch;
+        flex-wrap: wrap;
+        .work-experience,
+        .education-experience{
+            flex-grow: 1;
+            width: 50%;
+            padding: 0 0 0 100px;
+        }
+
+        @media (max-width: 480px) {
+            .work-experience,
+            .education-experience{
+                padding: 50px 0 0 5px;
+                width: 100%;
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+        .experience-section{
+            background-size: 60px;
+            background-repeat: no-repeat;
+            h4,h5{
+                font-family: 'Inria Serif', serif;
+                margin: 5px 0;
+            }
+            h5{
+                color: #565656;
+            }
+        }
+    }
+}

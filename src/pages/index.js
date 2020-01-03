@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import HomePage from "../components/home-page"
 import AboutMe from "../components/about-me"
 import Projects from "../components/projects"
+import Experience from "../components/experience"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -16,6 +17,8 @@ const IndexPage = () => (
     <br/>
     <AboutMe />
     <Projects />
+    <hr/>
+    <Experience />
   </Layout>
 )
 

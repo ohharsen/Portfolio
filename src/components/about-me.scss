@@ -10,6 +10,7 @@
         color: #7510F7;
         font-weight: 350;
         text-decoration: underline;
+        text-align: center;
     }
  
     p{
@@ -70,6 +71,9 @@
             text-align: center;
             font-family: 'Barlow Semi Condensed', sans-serif;
             font-size: 1.25rem;
+        }
+        figure{
+            margin: 1.45rem auto;
         }
         img{
             width: 300px;
