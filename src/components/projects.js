@@ -5,6 +5,7 @@ import {Link} from 'gatsby'
 import './projects.scss'
 
 import ProjectThumbnailImage from '../images/project-thumbnail.png'
+import { SSL_OP_NO_TLSv1_1 } from 'constants';
 
 export default function Projects(){
     return (
