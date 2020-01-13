@@ -26,6 +26,7 @@
     "typed.js": "^2.0.11"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -39,6 +40,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -r https://github.com/4R53N/Portfolio.git",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
