@@ -5,7 +5,11 @@ import {Link} from 'gatsby'
 import './projects.scss'
 
 import ProjectThumbnailImage from '../images/project-thumbnail.png'
+import OrchidThumbnailImage from '../images/orchid.png'
+import OptiEatThumbnailImage from '../images/optieat.png'
+import ComingSoonThumbnailImage from '../images/coming-soon.jpg'
 import { SSL_OP_NO_TLSv1_1 } from 'constants';
+import { checkPropTypes } from 'prop-types';
 
 export default function Projects(){
     return (
@@ -125,33 +129,34 @@ export default function Projects(){
                         "retina_detect": true
                       }}
             />
-            <h1>Projects</h1>
+            <h1>PROJECTS</h1>
           </div>
            
             <div class = "thumbnails-container">
               <ProjectThumbnail 
-                title = "Best Project Ever"
-                description = {` This website is so good it
-                                 will make your wife wet and yo mam is
-                                 a hoe so you better get used to it nigga.
-                                 Enough bitching about stuff yoooo.`}
-                technologies = "React, Redux, Node, HTML5, CSS3, JavaScript, C++"
+                title = "Orchid"
+                link = "http://orchid-frontend.herokuapp.com/"
+                thumbnail = {OrchidThumbnailImage}
+                description = {` POS system developed using MERN Stack for managing inventory 
+                                 and customer data, executing sales and viewing reports`}
+                technologies = "React, Node.js/Express, HTML5/CSS3, MongoDB, AJAX"
+              />
+              <ProjectThumbnail 
+                title = "OptiEat"
+                thumbnail = {OptiEatThumbnailImage}
+                link = "http://optieat.herokuapp.com/"
+                description = {` Within 36 hours created the front end and the RESTful API 
+                for the application that scans grocery shopping receipts and provides user a 
+                meal plan of recipes to minimize the waste. Reduced waste from 38% to 0%.`}
+                technologies = "React 16.9, Node JS/Express, HTML5, CSS3, AWS, Heroku, AWS, ML"
               />
               <ProjectThumbnail 
                 title = "Best Project Ever"
-                description = {` This website is so good it
-                                 will make your wife wet and yo mam is
-                                 a hoe so you better get used to it nigga.
-                                 Enough bitching about stuff yoooo.`}
-                technologies = "React, Redux, Node, HTML5, CSS3, JavaScript, C++"
-              />
-              <ProjectThumbnail 
-                title = "Best Project Ever"
-                description = {` This website is so good it
-                                 will make your wife wet and yo mam is
-                                 a hoe so you better get used to it nigga.
-                                 Enough bitching about stuff yoooo.`}
-                technologies = "React, Redux, Node, HTML5, CSS3, JavaScript, C++"
+                thumbnail = {ComingSoonThumbnailImage}
+                link = "https://www.google.com"
+                description = {` Yep, you guessed right, it is still under construction.
+                                 Until then, enjoy a free link to google.com`}
+                technologies = "Crazy advanced technology used here."
               />
             </div>
         </div>
@@ -161,7 +166,7 @@ export default function Projects(){
 function ProjectThumbnail(params){
   return(
     <div class = "thumbnail">
-      <a href = "https://www.google.com/" target="_blank"><img src={ProjectThumbnailImage} />  
+      <a href = {params.link} target="_blank"><img src={params.thumbnail} />  
         <h4 class = "title">{params.title}</h4>
         <hr class = "project-section-divider" /> 
         <p class = "description">{params.description}</p>

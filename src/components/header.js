@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 import PropTypes from "prop-types"
 import React,{useState, useLayoutEffect} from "react"
 import HamburgerMenu from "react-hamburger-menu"
@@ -44,20 +44,20 @@ const Header = ({ siteTitle }) => {
 
   return <header className={!isOnTop ? 'active' : ''}>
     <nav>
+    <Link smooth={true} duration = {300} to = "home-page">
       <div class = "logo-container">
-        <Link to = '/'>
-        </Link>
       </div>
+    </Link>
       <ul class = "nav-buttons">
-        <li class = "active" id="home-button"><Link to = "#home-page">Home</Link></li>
+        <li class = "active" id="home-button"><Link smooth={true} duration = {300} to = "home-page">Home</Link></li>
         <li>|</li>
-        <li id="about-button"><Link to = "#about-me">About</Link></li>
+        <li id="about-button"><Link smooth={true} duration = {300} to = "about-me">About</Link></li>
         <li>|</li>
-        <li id="projects-button"><Link to = "#projects">Projects</Link></li>
+        <li id="projects-button"><Link smooth={true} duration = {300} to = "projects">Projects</Link></li>
         <li>|</li>
-        <li id="experience-button"><Link to = "#experience">Experience</Link></li>
+        <li id="experience-button"><Link smooth={true} duration = {300} to = "experience">Experience</Link></li>
         <li>|</li>
-        <li id="contact-button"><Link to = "#contact">Contact</Link></li>
+        <li id="contact-button"><Link smooth={true} duration = {300} to = "contact">Contact</Link></li>
       </ul>
       <div class = "hamburger">
         <HamburgerMenu
@@ -73,12 +73,12 @@ const Header = ({ siteTitle }) => {
       />
     </div>
     </nav>
-    <ul className = "mobile-menu closed">
-      <li className = "active"><Link to = "#home-page">Home</Link></li>
-      <li><Link to = "#about-me">About Me</Link></li>
-      <li><Link to = "#projects">Projects</Link></li>
-      <li><Link to = "#experience">Experience</Link></li>
-      <li><Link to = "#contact">Contact</Link></li>
+    <ul className = "mobile-menu">
+      <li className = "active"><Link to = "home-page" smooth={true} duration = {300}>Home</Link></li>
+      <li><Link to = "about-me" smooth={true} duration = {300}>About Me</Link></li>
+      <li><Link to = "projects" smooth={true} duration = {300}>Projects</Link></li>
+      <li><Link to = "experience" smooth={true} duration = {300}>Experience</Link></li>
+      <li><Link to = "contact" smooth={true} duration = {300}>Contact</Link></li>
     </ul>
   </header>
 }

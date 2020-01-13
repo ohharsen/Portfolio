@@ -123,7 +123,7 @@ export default function Contact(){
                       }}
             />
             <div className = "contact-content">
-                <h1>Contacts</h1>
+                <h1>CONTACT ME</h1>
                 <SocialMedia />
                 <p>Email: arsenohanyan@gmail.com</p>
                 <p>Tel: 818-518-7085</p>
@@ -138,6 +138,6 @@ function SocialMedia(){
     return(<div className = "social-media">
         <a href = "https://www.linkedin.com/in/ohharsen" target = "_blank"><img src = {LinkedinIcon}/></a>
         <a href = "https://github.com/4R53N" target = "_blank"><img src = {GitHubIcon}/></a>
-        <a rhef = "mailto:arsenohanyan@gmail.com" target = "_blank"><img src = {EmailIcon}/></a>
+        <a href = "mailto:arsenohanyan@gmail.com"><img src = {EmailIcon}/></a>
     </div>)
 }

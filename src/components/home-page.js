@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'gatsby';
+import { Link } from 'react-scroll';
 import './home-page.scss';
 import Typed from 'react-typed';
 import 'react-typed/dist/animatedCursor.css';
@@ -12,11 +12,9 @@ export default function HomePage(){
             typeSpeed={60}
         />
        <p>I am a Software Engineer who has been in love with computers
-           since he could get his hands on it. Currently, I am interning
-           at Amazon Inc. and I have a strong interest in Cyber Security,
-           Augmented Reality and Math. 
+          since the day he had his hands on them.
        </p>
-       <button class = "view-work-button"><Link to = "">View My Work ⇓</Link></button>
-       <button class = "resume-button"><Link to = "">Resume</Link></button>
+       <button class = "view-work-button"><Link smooth={true} duration = {500} to = "about-me">View My Work ⇓</Link></button>
+       <button class = "resume-button"><a href = "https://drive.google.com/file/d/17iYD6cV5WVIY0wqQ_IUauY1LkAXp6GMX/view?usp=sharing" target = "_blank">Resume</a></button>
     </div>)
 }

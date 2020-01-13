@@ -28,10 +28,13 @@ header{
         align-items: center;
         height: 100%;
         .logo-container{
-            width: 30px;
-            height: 30px;
-            background: url('../images/github-logo.png');
-            background-size: contain;
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            background: url('../images/initials-logo.png');
+            background-size: 50px 40px;
+            background-position: left top;
+            background-repeat: no-repeat;
             a{
                 display: block;
                 width: 100%;
@@ -57,6 +60,7 @@ header{
                     animation-duration: 0.1s;
                     animation-fill-mode: forwards; 
                     text-decoration: none;
+                    cursor: pointer;
                 }
             }
 
