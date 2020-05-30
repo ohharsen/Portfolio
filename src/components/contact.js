@@ -4,7 +4,7 @@ import Particles from "react-particles-js"
 import './contact.scss'
 
 import LinkedinIcon from '../images/Linkedin.png'
-import GitHubIcon from '../images/GitHub.png'
+import GitHubIcon from '../images/Github.png'
 import EmailIcon from '../images/Email.png'
 export default function Contact(){
     return (<div class = "contact">
